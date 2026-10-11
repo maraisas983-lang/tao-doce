@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <title>Tão Doce | Doceria Gourmet em Alfenas</title>
+    <meta
+      name="description"
+      content="Tão Doce, doceria gourmet de Alfenas, Minas Gerais. Doces artesanais feitos com carinho."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="sr" href="#conteudo">Pular para o conteúdo</a>
+    <div id="pg" aria-hidden="true"></div>
+
+    <header id="hd">
+      <div class="hbar">
+        <div class="hdec" aria-hidden="true"></div>
+        <div class="wrap bar">
+          <a class="logo" href="#/" aria-label="Tão Doce, início"
+            ><span class="seal" aria-hidden="true">T</span
+            ><span class="lt"><b>Tão Doce</b><small>Doceria gourmet</small></span></a
+          >
+          <i class="vsep" aria-hidden="true"></i>
+          <nav id="nav" aria-label="Principal">
+            <ul>
+              <li>
+                <a href="#/" data-k="inicio"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" /></svg
+                  ><span>Início</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#/cardapio"
+                  id="navCard"
+                  data-k="cardapio"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="mega"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14l-1.5 8h-11zM7 12c0-3 2-5 5-5s5 2 5 5M12 4v3" /></svg
+                  ><span>Cardápio</span></a
+                >
+              </li>
+              <li>
+                <a href="#/destaques" data-k="destaques"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"
+                    /></svg
+                  ><span>Destaques</span></a
+                >
+              </li>
+              <li>
+                <a href="#/historia" data-k="historia"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 6c-2-1.5-5-2-9-2v14c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2zM12 6v14"
+                    /></svg
+                  ><span>Nossa História</span></a
+                >
+              </li>
+              <li>
+                <a href="#/contato" data-k="contato"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.9-5.4A8 8 0 1 1 21 12z" /></svg
+                  ><span>Contato</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a class="btn gold hd-cta" href="#/contato"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2" /></svg
+            ><span>Encomendas</span></a
+          >
+          <button
+            class="menu"
+            id="menu"
+            aria-expanded="false"
+            aria-controls="nav"
+            aria-label="Abrir menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div id="mega" class="mega" aria-hidden="true"></div>
+    </header>
+    <main id="conteudo"></main>
+    <footer id="rodape">
+      <div class="wrap">
+        <div class="cols rv">
+          <div>
+            <h4>Tão Doce</h4>
+            <p>Doceria gourmet de Alfenas, Minas Gerais. Doces artesanais feitos com carinho.</p>
+          </div>
+          <div>
+            <h4>Navegue</h4>
+            <ul>
+              <li><a href="#/">Início</a></li>
+              <li><a href="#/cardapio">Cardápio</a></li>
+              <li><a href="#/historia">Nossa História</a></li>
+              <li><a href="#/contato">Encomendas</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul id="contatos"></ul>
+          </div>
+        </div>
+        <div class="copy">© <span id="ano"></span> Tão Doce. Alfenas, MG.</div>
+      </div>
+    </footer>
+
+    <script src="js/assets.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
