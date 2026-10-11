@@ -147,14 +147,14 @@ header.solid {
   font: 800 1.5rem var(--serif);
   letter-spacing: -0.03em;
 }
-nav ul {
+#nav ul {
   display: flex;
   gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-nav a {
+#nav a {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -162,7 +162,7 @@ nav a {
   background: linear-gradient(var(--ouro), var(--ouro)) 0 100%/0 1.5px no-repeat;
   transition: background-size 0.3s;
 }
-nav a:hover {
+#nav a:hover {
   background-size: 100% 1.5px;
 }
 .menu {
@@ -561,10 +561,10 @@ footer a:hover {
 }
 /* produto */
 .prod {
-  padding: 120px 0 90px;
+  padding: calc(var(--hh) + env(safe-area-inset-top, 0px) + 36px) 0 90px;
   background: var(--quente);
 }
-.crumb {
+.product-breadcrumb {
   font-size: 0.9rem;
   margin-bottom: 32px;
 }
@@ -574,14 +574,14 @@ footer a:hover {
   gap: 56px;
   align-items: start;
 }
-.gal .big {
+.product-image {
   aspect-ratio: 1;
   border-radius: 24px;
   overflow: hidden;
   background: var(--creme);
   border: 1.5px solid var(--ouro);
 }
-.gal .big > * {
+.product-image > * {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -961,7 +961,7 @@ footer a:hover {
   .menu {
     display: block;
   }
-  nav {
+  #nav {
     position: fixed;
     inset: 0 0 auto 0;
     top: 76px;
@@ -972,15 +972,15 @@ footer a:hover {
     transition: transform 0.4s;
     visibility: hidden;
   }
-  nav.open {
+  #nav.open {
     transform: none;
     visibility: visible;
   }
-  nav ul {
+  #nav ul {
     flex-direction: column;
     gap: 6px;
   }
-  nav a {
+  #nav a {
     display: block;
     padding: 14px 0;
     font-size: 1.1rem;
@@ -2255,10 +2255,10 @@ header.solid {
   background: rgba(74, 43, 32, 0.2);
   margin: 0 8px;
 }
-nav ul {
+#nav ul {
   gap: 4px;
 }
-nav a {
+#nav a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2271,7 +2271,7 @@ nav a {
     background 0.25s,
     color 0.25s;
 }
-nav a svg {
+#nav a svg {
   width: 23px;
   height: 23px;
   fill: none;
@@ -2280,10 +2280,10 @@ nav a svg {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-nav a:hover {
+#nav a:hover {
   background: rgba(74, 43, 32, 0.08);
 }
-nav a.act {
+#nav a.act {
   background: var(--choc);
   color: var(--quente);
 }
@@ -2452,12 +2452,12 @@ nav a.act {
   font-size: 0.88rem;
 }
 @media (max-width: 1180px) {
-  nav a svg,
+  #nav a svg,
   .vsep,
   .lt small {
     display: none;
   }
-  nav a {
+  #nav a {
     padding: 12px 14px;
   }
   .hd-cta {
@@ -2488,17 +2488,17 @@ nav a.act {
   .lt b {
     font-size: 1.4rem;
   }
-  nav {
+  #nav {
     top: calc(var(--hh) + env(safe-area-inset-top, 0px));
     padding-top: 12px;
     border-radius: 0 0 20px 20px;
   }
-  nav a {
+  #nav a {
     display: flex;
     font-size: 1.05rem;
     padding: 14px 18px;
   }
-  nav a svg {
+  #nav a svg {
     display: block;
   }
   .hs {
@@ -2596,12 +2596,12 @@ nav a.act {
   height: 36px;
   margin: 0 6px;
 }
-nav a {
+#nav a {
   padding: 10px 16px;
   font-size: 0.92rem;
   gap: 8px;
 }
-nav a svg {
+#nav a svg {
   width: 20px;
   height: 20px;
 }

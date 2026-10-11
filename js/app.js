@@ -373,10 +373,9 @@ function produto(slug) {
   const p = PRODUTOS.find((x) => x.slug === slug);
   if (!p)
     return `<section class="prod"><div class="wrap"><h1>Produto não encontrado</h1><p>Esse produto não existe ou foi removido.</p><a class="btn" href="#/cardapio">Voltar ao cardápio</a></div></section>`;
-  const n = 1 + p.imagens.length,
-    rel = ordenados().filter((x) => x.id !== p.id);
-  return `<section class="prod"><div class="wrap"><nav class="crumb" aria-label="Você está em"><a href="#/">Início</a> / <a href="#/cardapio">Cardápio</a> / ${esc(p.nome)}</nav>
- <div class="pgrid"><div class="gal rv rv-l"><div class="big">${media(p, 0)}</div></div>
+  const rel = ordenados().filter((x) => x.id !== p.id);
+  return `<section class="prod"><div class="wrap"><nav class="product-breadcrumb" aria-label="Você está em"><a href="#/">Início</a> / <a href="#/cardapio">Cardápio</a> / ${esc(p.nome)}</nav>
+ <div class="pgrid"><div class="gal rv rv-l"><div class="product-image">${media(p, 0)}</div></div>
  <div class="pinfo rv rv-r"><span class="tag">${esc(p.categoria)}</span><h1>${esc(p.nome)}</h1><p>${esc(p.completa)}</p>
  <dl>${p.preco != null ? `<dt>Preço</dt><dd>${brl(p.preco)}</dd>` : ""}${p.disponibilidade ? `<dt>Disponibilidade</dt><dd>${esc(p.disponibilidade)}</dd>` : ""}</dl>
  <button class="btn" id="enc" data-prod="${esc(p.nome)}">Encomendar</button><div class="msg" id="msg" role="status" style="color:var(--caramelo)"></div></div></div>
@@ -426,7 +425,7 @@ function rota() {
   const main = $("#conteudo");
   if (a === "produto") {
     main.innerHTML = produto(b);
-    scrollTo(0, 0);
+    scrollTo({ top: 0, left: 0, behavior: "instant" });
   } else {
     main.innerHTML = home();
     liga();
